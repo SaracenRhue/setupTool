@@ -11,12 +11,12 @@ echo 'ZSH_THEME="powerlevel10k/powerlevel10k"' >> ~/.zshrc
 curl -L http://install.ohmyz.sh | sh
 
 
-brew install python openjdk wget htop pyenv
+brew install python openjdk wget htop pyenv nodejs npm
 source ~/.zshrc
 pyenv install 3.10.1
 pyenv global 3.10.1
 #install programs
-brew install --cask visual-studio-code firefox github nodejs npm
+brew install --cask visual-studio-code firefox github
 
 # setup program generator
 wget https://raw.githubusercontent.com/SaracenRhue/projectGenerator/main/.generator.py
