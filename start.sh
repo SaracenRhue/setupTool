@@ -5,7 +5,7 @@ do
     cat<<EOF
     Please enter your choice:
      (0) server
-     (1) Desktop
+     (1) desktop
 EOF
     read -n1 -s
     case "$REPLY" in

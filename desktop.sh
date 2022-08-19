@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd ./desktops
+
 do
     clear
     cat<<EOF
@@ -11,10 +13,10 @@ do
 EOF
     read -n1 -s
     case "$REPLY" in
-        "0")bash ./desktops/mac.sh;;
-        "1")bash ./desktops/arch.sh;;
-        "2")bash ./desktops/debian.sh;;
-        "3")bash ./desktops/fedora.sh;;
+        "0")bash ./post/mac.sh;;
+        "1")bash ./arch.sh;;
+        "2")bash ./debian.sh;;
+        "3")bash ./fedora.sh;;
      * )  echo "invalid option" ;;
     esac
     sleep 1
