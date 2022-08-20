@@ -13,9 +13,9 @@ EOF
     read -n1 -s
     case "$REPLY" in
         "0")bash ./post/mac.sh;;
-        "1")bash ./arch.sh;;
-        "2")bash ./debian.sh;;
-        "3")bash ./fedora.sh;;
+        "1")bash ./archprepost.sh;;
+        "2")bash ./debianprepost.sh;;
+        "3")bash ./fedoraprepost.sh;;
      * )  echo "invalid option" ;;
     esac
     sleep 1
