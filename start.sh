@@ -1,6 +1,7 @@
 #!/bin/bash
 
-do
+cd unixtool
+
     clear
     cat<<EOF
     Please enter your choice:

@@ -1,6 +1,5 @@
 #!/bin/bash
 
-do
     clear
     cat<<EOF
     Please enter your choice:

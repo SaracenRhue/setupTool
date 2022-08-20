@@ -2,7 +2,6 @@
 
 cd ./desktops
 
-do
     clear
     cat<<EOF
     Please enter your choice:
