@@ -42,6 +42,7 @@ PKGS=(
 'xdg-user-dirs-gtk'
 'grub'
 'grub-btrfs'
+'papirus-icon-theme'
 )
 for PKG in "${PKGS[@]}"; do
     sudo dnf install $PKG -y

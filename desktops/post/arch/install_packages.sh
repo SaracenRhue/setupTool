@@ -27,6 +27,7 @@ PKGS=(
 'visual-studio-code-bin'
 'wget'
 'zoom'
+'papirus-icon-theme'
 )
          
 for PKG in "${PKGS[@]}"; do
