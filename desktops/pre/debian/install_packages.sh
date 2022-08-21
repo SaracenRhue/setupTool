@@ -22,7 +22,7 @@ PKGS=(
 'terminator'
 'thunderbird'
 'timeshift'
-'vlc'
+'celluloid'
 'tree'
 'nodejs'
 'npm'

@@ -9,12 +9,13 @@ echo "plugins=(zsh-autosuggestions)" >> ~/.zshrc
 sudo git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 echo 'ZSH_THEME="powerlevel10k/powerlevel10k"' >> ~/.zshrc
 curl -L http://install.ohmyz.sh | sh
+echo "neofetch" >> ~/.zshrc
 
 
-brew install python openjdk wget htop pyenv nodejs npm
+brew install python openjdk wget htop pyenv nodejs npm watchman
 source ~/.zshrc
-pyenv install 3.10.1
-pyenv global 3.10.1
+pyenv install 3.10.6
+pyenv global 3.10.6
 #install programs
 brew install --cask visual-studio-code firefox github
 
