@@ -40,4 +40,8 @@ done
     sudo apt install ./zoom_amd64.deb
     sudo rm -fr zoom_amd64.deb
 
+wget https://installers.privateinternetaccess.com/download/pia-linux-3.3.1-06924.run
+sh pia-linux-3.3.1-06924.run
+sudo rm -fr pia-linux-3.3.1-06924.run
+
 sudo apt autoremove -y

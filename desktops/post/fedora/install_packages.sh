@@ -37,3 +37,6 @@ for PKG in "${PKGS[@]}"; do
     sudo dnf install $PKG -y
 done
 
+wget https://installers.privateinternetaccess.com/download/pia-linux-3.3.1-06924.run
+sh pia-linux-3.3.1-06924.run
+sudo rm -fr pia-linux-3.3.1-06924.run
