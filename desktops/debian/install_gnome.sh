@@ -49,7 +49,10 @@ for PKG in "${PKGS[@]}"; do
 done
 
 
-# set dark theme
-gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 #enable gnome display manager
 sudo systemctl enable gdm.service
+sudo systemctl set-default graphical.target
+# set dark theme
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+# set icon theme
+gsettings set org.gnome.desktop.interface icon-theme 'papirus-icon-theme'
