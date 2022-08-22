@@ -22,6 +22,7 @@ to select multiple input `0 1 2 3`
 * enable Debian root user
 * install a clean gnome desktop
 * purge unnecessary packages from a already installed gnome desktop
+* install various packages I like to use
 
 
 
