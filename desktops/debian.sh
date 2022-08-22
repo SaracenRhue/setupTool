@@ -8,3 +8,5 @@
 
 source ~/.bashrc
 source ~/.zshrc
+
+python3 ./debian.py
