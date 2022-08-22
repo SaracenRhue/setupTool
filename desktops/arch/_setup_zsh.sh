@@ -8,3 +8,4 @@ curl -L http://install.ohmyz.sh | sh
 chsh -s $(which zsh)
 echo "neofetch" >> ~/.zshrc
 source ~/.zshrc
+zsh
