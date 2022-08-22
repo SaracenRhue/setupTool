@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo pacman -Syu --noconfirm
-packman -S --noconfirm wget curl python3 python-pip
+packman -S --noconfirm wget curl python3 python-pip htop
 
 # yay setup
 sudo pacman -S --noconfirm git base-devel # install yay

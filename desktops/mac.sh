@@ -3,7 +3,7 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 source ~/.zshrc
 
-brew install python openjdk wget htop pyenv nodejs npm watchman
+brew install python pyenv wget openjdk htop nodejs npm watchman go rust
 source ~/.zshrc
 pyenv install 3.10.6
 pyenv global 3.10.6
