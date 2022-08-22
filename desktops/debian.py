@@ -9,7 +9,7 @@ def trigger(index):
 
 print('What tasks would you like to set up?')
 for i in tasks:
-    print(str(tasks.index(i))+') '+tasks[tasks.index(i)].replace('.sh','').replace('_',' ').replace('a_',''))
+    print(str(tasks.index(i))+') '+tasks[tasks.index(i)].replace('.sh','').replace('_',' '))
 
 selection = str(input('> '))
 
@@ -20,5 +20,6 @@ elif len(selection) == 1:
     trigger(int(selection))
 else:
     selection = [int(i) for i in selection.split() if i.isdigit()]
+    selection = selection.sort()
     for i in selection:
         trigger(selection[selection.index(i)])
