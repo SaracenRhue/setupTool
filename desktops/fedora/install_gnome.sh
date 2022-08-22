@@ -49,7 +49,8 @@ for PKG in "${PKGS[@]}"; do
 done
 
 
-# set dark theme
-gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+
 #enable gnome display manager
 sudo systemctl enable gdm.service
+# set dark theme
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
