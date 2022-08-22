@@ -21,7 +21,7 @@ EOF
     sleep 1
 
 cd
-    clear
+    #clear
     cat<<EOF
     Do you want to setup the project creator script?:
      (0) yes
@@ -40,11 +40,11 @@ EOF
     sleep 1
 
 
-echo "\x1b[32m" # Green
+
 echo "  __  __      ___ "
 echo " /  )/  )/| )(_   "
 echo "/(_/(__// |/ /__  "
-echo "\x1b[39m" # default color
+
 
 #reboot
 echo "Rebooting in 3 Seconds ..." && sleep 1
