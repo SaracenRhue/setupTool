@@ -55,4 +55,4 @@ sudo systemctl set-default graphical.target
 # set dark theme
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 # set icon theme
-gsettings set org.gnome.desktop.interface icon-theme 'papirus-icon-theme'
+gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
