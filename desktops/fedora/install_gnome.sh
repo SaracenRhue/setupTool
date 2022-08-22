@@ -52,5 +52,6 @@ done
 
 #enable gnome display manager
 sudo systemctl enable gdm.service
+sudo systemctl set-default graphical.target
 # set dark theme
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
