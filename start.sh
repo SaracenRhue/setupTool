@@ -1,7 +1,6 @@
 #!/bin/bash
 
-cd ./unixtool
-cd ./desktops
+cd ./unixtool/desktops
 
     clear
     cat<<EOF
