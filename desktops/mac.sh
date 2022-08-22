@@ -3,6 +3,11 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 source ~/.zshrc
 
+brew install python openjdk wget htop pyenv nodejs npm watchman
+source ~/.zshrc
+pyenv install 3.10.6
+pyenv global 3.10.6
+
 #zsh
 brew install zsh zsh-autosuggestions zsh-syntax-highlighting neofetch
 echo "plugins=(zsh-autosuggestions)" >> ~/.zshrc
@@ -12,10 +17,6 @@ curl -L http://install.ohmyz.sh | sh
 echo "neofetch" >> ~/.zshrc
 
 
-brew install python openjdk wget htop pyenv nodejs npm watchman
-source ~/.zshrc
-pyenv install 3.10.6
-pyenv global 3.10.6
 #install programs
 brew install --cask visual-studio-code firefox github
 
