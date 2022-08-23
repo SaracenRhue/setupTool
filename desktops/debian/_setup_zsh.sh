@@ -8,4 +8,3 @@
              chsh -s $(which zsh)
              echo "neofetch" >> ~/.zshrc
              source ~/.zshrc
-             zsh

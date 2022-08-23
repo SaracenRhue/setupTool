@@ -28,6 +28,7 @@ PKGS=(
 'krusader'
 'brave-browser'
 'openjdk-17-jdk'
+'papirus-icon-theme'
 )
          
 for PKG in "${PKGS[@]}"; do
