@@ -21,6 +21,7 @@ to select multiple input `0 1 2 3`
 * (re)install linux graphic drivers
 * enable Debian root user
 * install a clean gnome desktop
+* install xfce desktop
 * purge unnecessary packages from a already installed gnome desktop
 * install various packages I like to use
 
