@@ -1,6 +1,8 @@
 #!/bin/bash
 
 sudo pacman -Syu --noconfirm
+pacman -S --noconfirm --needed terminus-font
+setfont ter-v22b
 
 
 #clear

@@ -7,4 +7,3 @@ echo 'ZSH_THEME="powerlevel10k/powerlevel10k"' >> ~/.zshrc
 curl -L http://install.ohmyz.sh | sh
 chsh -s $(which zsh)
 echo "neofetch" >> ~/.zshrc
-source ~/.zshrc
