@@ -2,6 +2,7 @@
 
 sudo pacman -Syu --noconfirm
 
+
 #clear
     cat<<EOF
     Do you want to use Archtitus?:
@@ -14,8 +15,10 @@ EOF
             git clone https://github.com/ChrisTitusTech/ArchTitus
             cd ArchTitus
             ./archtitus.sh
+            exit
             ;;
-        "1")packman -S --noconfirm wget curl python3 python-pip htop
+        "1")
+            packman -S --noconfirm wget curl python3 python-pip htop
             # yay setup
             sudo pacman -S --noconfirm git base-devel
             sudo git clone https://aur.archlinux.org/yay.git
