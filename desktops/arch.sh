@@ -31,9 +31,9 @@ EOF
 
             source ~/.bashrc
             source ~/.zshrc
+            python3 ./arch.py
             ;;
      * )  echo "invalid option" ;;
     esac
     sleep 1
 
-python3 ./arch.py
