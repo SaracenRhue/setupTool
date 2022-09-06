@@ -22,7 +22,7 @@ EOF
         "1")
             packman -S --noconfirm wget curl python3 python-pip htop
             # yay setup
-            sudo pacman -S --noconfirm git base-devel
+            sudo pacman -S --noconfirm base-devel
             sudo git clone https://aur.archlinux.org/yay.git
             sudo chown -R $USER:users ./yay
             sudo chown -W $USER:users ./yay
