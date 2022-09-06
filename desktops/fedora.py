@@ -9,7 +9,7 @@ def trigger(index):
 
 print('What tasks would you like to set up?')
 for i in tasks:
-    print(str(tasks.index(i))+') '+tasks[tasks.index(i)].replace('.sh','').replace('_',' ').replace('0','').replace('1',''))
+    print(str(tasks.index(i))+') '+tasks[tasks.index(i)].replace('.sh','').replace('_',' '))
 
 selection = str(input('> '))
 
