@@ -7,7 +7,9 @@ This tool tool helps you set up your Arch, Debian, Fedora and MacOS system
 ## Usage
 
 paste this in your terminal
-`bash -c "$(curl -fsSL https://raw.githubusercontent.com/SaracenRhue/unixTool/main/cstart.sh)"`
+```
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/SaracenRhue/unixTool/main/cstart.sh)"
+```
 
 or
 
