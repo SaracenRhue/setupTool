@@ -42,6 +42,7 @@ to select multiple input `0 1 2 3`
 ### Docker Ports
 * code-server `http://localhost:5500`
 * filebot `http://localhost:5700`
+* firefox `http://localhost:3000`
 * heimdall `http://localhost:5080`
 * krusader `http://localhost:6080/vnc.html?resize=remote&host=localhost&port=6080&&autoconnect=1`
 * mediainfo `http://localhost:5877`
