@@ -6,7 +6,7 @@ sudo docker run -d \
   -e PGID=1000 \
   -e TZ=Europe/Vienna \
   -p 8888:8888 \
-  -p 5555:5555 \
+  -p 55555:55555 \
   -v /docker/appdata/resilio/config:/config \
   -v /docker/appdata/resilio/downloads:/downloads \
   -v /docker/appdata/resilio/sync:/sync \
