@@ -24,7 +24,8 @@ to select multiple input `0 1 2 3`
 
 ## Features 
 * setup zsh and neofetch
-* setup yay for Arch
+* install yay for AUR
++ install nix for Debian and Fedora
 * setup homebrew for Debian Fedora and MacOS
 * setup docker for Debian and Fedora (with a selection of Containers to install)
 * change your grub theme ([ ChrisTitusTech/Top-5-Bootloader-Themes ](https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes))
