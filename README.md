@@ -6,7 +6,15 @@ This tool tool helps you set up your Arch, Debian, Fedora and MacOS system
 
 ## Usage
 
-`bash ./unixtool/start.sh`
+paste this in your terminal
+`bash -c "$(curl -fsSL https://raw.githubusercontent.com/SaracenRhue/unixTool/main/cstart.sh)"`
+
+or
+
+```
+git clone https://github.com/saracenrhue/unixtool.git
+bash ./unixtool/start.sh
+```
 
 to install all input `all`
 to select multiple input `0 1 2 3`
