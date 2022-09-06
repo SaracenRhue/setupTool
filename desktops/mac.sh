@@ -1,6 +1,8 @@
 #!/bin/bash
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zshrc
 source ~/.zshrc
 
 brew install python pyenv wget openjdk htop nodejs npm watchman go rust
