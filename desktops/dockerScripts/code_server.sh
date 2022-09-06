@@ -1,10 +1,10 @@
 #!/bin/bash
 
-docker run -d \
+sudo docker run -d \
   --name=code-server \
   -e PUID=1000 \
   -e PGID=1000 \
-  -e TZ=Europe/Berlin \
+  -e TZ=Europe/Vienna \
   -e PASSWORD=password `#optional` \
   -e HASHED_PASSWORD= `#optional` \
   -e SUDO_PASSWORD=password `#optional` \
