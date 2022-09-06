@@ -51,7 +51,7 @@ to select multiple input `0 1 2 3`
 * organizr `http://localhost:9983`
 * plex `http://localhost:23400/web/index.html`
 * portainer `http://localhost:9000`
-* resilio `http://localhost:55555`
+* resilio-sync `http://localhost:55555`
 
 ### Developers
 
