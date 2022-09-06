@@ -42,5 +42,5 @@ to select multiple input `0 1 2 3`
 ### Developers
 
 You can add new features by adding a new .sh file into the distro folder.
-the menue gets generated automaticly by reading the filenames of that folder.
+the menu gets generated automaticly by reading the filenames in that folder.
 (use _ for spaces in your filenames)
