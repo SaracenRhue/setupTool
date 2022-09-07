@@ -44,6 +44,7 @@ to select multiple input `0 1 2 3`
 * dashdot `http://localhost:3001`
 * filebot `http://localhost:5700`
 * firefox `http://localhost:3000`
+* guacamole `http://localhost:8067`
 * heimdall `http://localhost:5080`
 * krusader `http://localhost:6080/vnc.html?resize=remote&host=localhost&port=6080&&autoconnect=1`
 * mediainfo `http://localhost:5877`
