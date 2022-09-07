@@ -41,6 +41,7 @@ to select multiple input `0 1 2 3`
 
 ### Docker Ports
 * code-server `http://localhost:5500`
+* dashdot `http://localhost:3001`
 * filebot `http://localhost:5700`
 * firefox `http://localhost:3000`
 * heimdall `http://localhost:5080`
