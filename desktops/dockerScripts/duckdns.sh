@@ -5,7 +5,7 @@ sudo docker run -d \
 -e PUID=1000 `#optional` \
 -e PGID=1000 `#optional` \
 -e TZ=Europe/Vienna \
--e SUBDOMAINS=yourtrackerdomain.duckdns.org\
+-e SUBDOMAINS=yourtrackerdomain.duckdns.org \
 -e TOKEN=putTokenHere \
 -e LOG_FILE=false `#optional` \
 -v /path/to/appdata/config:/config `#optional` \
