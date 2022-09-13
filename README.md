@@ -55,7 +55,7 @@ to select multiple input `0 1 2 3`
 * portainer `http://localhost:9000`
 * resilio-sync `http://localhost:8888`
 
-to setup nginx forward port `80` to `1880` and `443` to `18443`
+to setup nginx forward port `80` to `1880` and `443` to `18443` on your router
 
 ### Developers
 
