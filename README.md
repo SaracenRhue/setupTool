@@ -59,4 +59,5 @@ to select multiple input `0 1 2 3`
 
 You can add new features by adding a new .sh file into the distro folder.
 the menu gets generated automaticly by reading the filenames in that folder.
-(use _ for spaces in your filenames)
+(use _ for spaces in your filenames)<br/>
+If you want to change the menu order you can add a # in front of the filename.
