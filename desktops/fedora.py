@@ -2,14 +2,14 @@ from os import system as cmd
 from os import listdir
 
 tasks = listdir('./fedora')
-
+tasks.sort()
 def trigger(index):
     cmd('bash ./fedora/'+tasks[index])
     print(index)
 
 print('What tasks would you like to set up?')
 for i in tasks:
-    print(str(tasks.index(i))+') '+tasks[tasks.index(i)].replace('.sh','').replace('_',' '))
+    print(str(tasks.index(i))+') '+tasks[tasks.index(i)].replace('.sh','').replace('_',' ').replace('#',''))
 
 selection = str(input('> '))
 
