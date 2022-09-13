@@ -7,6 +7,7 @@ This tool tool helps you set up your Arch, Debian, Fedora and MacOS system
 ## Usage
 
 paste this in your terminal
+
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/SaracenRhue/unixTool/main/cstart.sh)"
 ```
@@ -21,15 +22,15 @@ bash ./unixtool/start.sh
 to install all input `all`
 to select multiple input `0 1 2 3`
 
+## Features
 
-## Features 
 * setup zsh and neofetch
 * install yay for AUR
 * install nix for Debian and Fedora
 * setup homebrew for Debian Fedora and MacOS
 * setup docker for Debian and Fedora (with a selection of Containers to install)
-* install Archtitus ([ ChrisTitusTech/ArchTitus ](https://github.com/ChrisTitusTech/ArchTitus))
-* change your grub theme ([ ChrisTitusTech/Top-5-Bootloader-Themes ](https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes))
+* install Archtitus ([ChrisTitusTech/ArchTitus](https://github.com/ChrisTitusTech/ArchTitus))
+* change your grub theme ([ChrisTitusTech/Top-5-Bootloader-Themes](https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes))
 * (re)install linux graphic drivers
 * enable Debian root user
 * install a clean gnome desktop
@@ -37,9 +38,8 @@ to select multiple input `0 1 2 3`
 * purge unnecessary packages from a already installed gnome desktop
 * install various packages I like to use
 
-
-
 ### Docker Ports
+
 * code-server `http://localhost:5500`
 * dashdot `http://localhost:3001`
 * filebot `http://localhost:5700`
