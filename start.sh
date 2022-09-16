@@ -29,8 +29,7 @@ cd
 EOF
     read -n1 -s
     case "$REPLY" in
-        "0")wget https://raw.githubusercontent.com/SaracenRhue/projectGenerator/main/.generator.py
-            echo "alias pg='python3 ./.generator.py'" >> ~/.zshrc
+        "0")bash -c "$(https://raw.githubusercontent.com/SaracenRhue/projectGenerator/main/setup.sh)"
             source ~/.zshrc
             rm -fr ./unixtool
             ;;
