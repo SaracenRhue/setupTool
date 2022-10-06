@@ -5,7 +5,7 @@ yes '' | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/i
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zshrc
 source ~/.zshrc
 
-brew install python pyenv wget openjdk htop nodejs npm watchman go rust
+brew install python pyenv wget openjdk htop nodejs npm watchman go rust kotlin
 source ~/.zshrc
 pyenv install 3.10.6
 pyenv global 3.10.6
@@ -26,3 +26,8 @@ brew install --cask visual-studio-code firefox github
 wget https://raw.githubusercontent.com/SaracenRhue/projectGenerator/main/.generator.py
 echo "alias pg='python3 ./.generator.py'" >> ~/.zshrc
 source ~/.zshrc
+
+npm install -g typescript
+npm install -g sass
+npm install -g @angular/cli
+pip3 install selenium eel pyautogui pyyaml pygame Pillow
