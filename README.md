@@ -25,7 +25,7 @@ bash -c "$(curl https://raw.githubusercontent.com/SaracenRhue/setupTool/main/cst
 or
 
 ```bash
-git clone https://github.com/saracenrhue/unixtool.git
+git clone https://github.com/saracenrhue/setuptool.git
 bash ./setuptool/start.sh
 ```
 
