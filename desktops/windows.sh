@@ -1,4 +1,4 @@
-scoop install vscode brave firefox discord github nodejs python310 go rust
+scoop install vscode brave firefox discord github nodejs python310 go rust pia-desktop vsc
 npm install -g typescript
 npm install -g sass
 npm install -g @angular/cli
