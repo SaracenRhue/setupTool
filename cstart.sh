@@ -1,4 +1,4 @@
 #!/bin/bash
 
-git clone https://github.com/saracenrhue/unixtool.git
+git clone https://github.com/saracenrhue/setuptooltool.git
 bash ./setuptool/start.sh
