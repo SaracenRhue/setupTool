@@ -3,6 +3,9 @@
 ## Description
 
 This tool tool helps you set up your Arch, Debian, Fedora and MacOS system.<br>
+
+## Usage
+
 For Windows run this in powershell first:
 
 ```powershell
@@ -13,9 +16,7 @@ scoop bucket add extras
 scoop bucket add versions
 ```
 
-## Usage
-
-paste this in your terminal
+paste this in your terminal / powershell:
 
 ```bash
 bash -c "$(curl https://raw.githubusercontent.com/SaracenRhue/unixTool/main/cstart.sh)"
