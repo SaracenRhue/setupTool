@@ -19,14 +19,14 @@ scoop bucket add versions
 paste this in your terminal / powershell:
 
 ```bash
-bash -c "$(curl https://raw.githubusercontent.com/SaracenRhue/setupTool/main/cstart.sh)"
-```
-
-or
-
-```bash
 git clone https://github.com/saracenrhue/setuptool.git
 bash ./setuptool/start.sh
+```
+
+or (doesn't work on windows):
+
+```bash
+bash -c "$(curl https://raw.githubusercontent.com/SaracenRhue/setupTool/main/cstart.sh)"
 ```
 
 to install all input `all`
