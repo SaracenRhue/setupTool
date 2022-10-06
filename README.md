@@ -1,22 +1,31 @@
-# unixTool
+# setupTool
 
 ## Description
 
-This tool tool helps you set up your Arch, Debian, Fedora and MacOS system 
+This tool tool helps you set up your Arch, Debian, Fedora and MacOS system.<br>
+For Windows run this in powershell first:
+
+```powershell
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run a remote script the first time
+irm get.scoop.sh | iex
+scoop install git
+scoop bucket add extras
+scoop bucket add versions
+```
 
 ## Usage
 
 paste this in your terminal
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/SaracenRhue/unixTool/main/cstart.sh)"
+bash -c "$(curl https://raw.githubusercontent.com/SaracenRhue/unixTool/main/cstart.sh)"
 ```
 
 or
 
 ```bash
 git clone https://github.com/saracenrhue/unixtool.git
-bash ./unixtool/start.sh
+bash ./setuptool/start.sh
 ```
 
 to install all input `all`

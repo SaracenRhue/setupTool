@@ -9,6 +9,7 @@ cd ./unixtool/desktops
      (1) Arch
      (2) Debian
      (3) Fedora
+     (4) Windows
 EOF
     read -n1 -s
     case "$REPLY" in
@@ -16,6 +17,7 @@ EOF
         "1")bash ./arch.sh;;
         "2")bash ./debian.sh;;
         "3")bash ./fedora.sh;;
+        "4")bash ./windows.sh;;
      * )  echo "invalid option" ;;
     esac
     sleep 1
@@ -29,11 +31,11 @@ cd
 EOF
     read -n1 -s
     case "$REPLY" in
-        "0")bash -c "$(https://raw.githubusercontent.com/SaracenRhue/projectGenerator/main/setup.sh)"
+        "0")bash -c "$(curl https://raw.githubusercontent.com/SaracenRhue/projectGenerator/main/setup.sh)"
             source ~/.zshrc
-            rm -fr ./unixtool
+            rm -fr ./setuptool
             ;;
-        "1")rm -fr ./unixtool;;
+        "1")rm -fr ./setuptool;;
      * )  echo "invalid option" ;;
     esac
     sleep 1
