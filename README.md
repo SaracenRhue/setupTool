@@ -19,7 +19,7 @@ scoop bucket add versions
 paste this in your terminal / powershell:
 
 ```bash
-bash -c "$(curl https://raw.githubusercontent.com/SaracenRhue/unixTool/main/cstart.sh)"
+bash -c "$(curl https://raw.githubusercontent.com/SaracenRhue/setupTool/main/cstart.sh)"
 ```
 
 or
