@@ -14,6 +14,25 @@ for PKG in "${PKGS[@]}"; do
     scoop install $PKG
 done
 
+# programs
+PKGS=(
+'vscode'
+'brave'
+'firefox'
+'discord'
+'github'
+'vlc'
+'pia-desktop'
+'wox'
+'bitwarden'
+'7zip'
+'winrar'
+'tor-browser'
+)
+for PKG in "${PKGS[@]}"; do
+    scoop install $PKG
+done
+
 # npm packages
 PKGS=(
 'typescript'
@@ -35,22 +54,4 @@ PKGS=(
 )      
 for PKG in "${PKGS[@]}"; do
     pip3 install $PKG
-done
-
-# programs
-PKGS=(
-'vscode'
-'brave'
-'firefox'
-'discord'
-'github'
-'vlc'
-'pia-desktop'
-'wox'
-'bitwarden'
-'7zip'
-'winrar'
-)
-for PKG in "${PKGS[@]}"; do
-    scoop install $PKG
 done
