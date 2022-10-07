@@ -1,0 +1,152 @@
+arch:
+  - setup_zsh
+  - clean_gnome
+  - install_jekyll
+debian:
+  - setup_zsh
+  - install_docker
+  - install_homebrew
+  - clean_gnome
+  - install_jekyll
+fedora:
+  - setup_zsh
+  - install_docker
+  - install_homebrew
+  - clean_gnome
+  - install_jekyll
+macos:
+  - setup_zsh
+  - install_homebrew
+windows:
+
+
+tasks:
+  setup_zsh:
+    main:
+      - inst_cmd zsh zsh-autosuggestions zsh-syntax-highlighting neofetch 
+      - bash -c "$(https://raw.githubusercontent.com/SaracenRhue/setupTool/main/tasks/setup_zsh.sh)"
+  install_docker:
+    main:
+      - bash -c "$(https://raw.githubusercontent.com/SaracenRhue/setupTool/main/tasks/install_docker.sh)"
+      - inst_cmd docker-compose
+      - python3 ./docker_menu.py
+  clean_gnome:
+    main:
+      - rm_cmd cheese
+      - rm_cmd xdg-desktop-portal-gnome
+      - rm_cmd gnome-books 
+      - rm_cmd gnome-calculator
+      - rm_cmd gnome-calendar
+      - rm_cmd gnome-characters
+      - rm_cmd gnome-clocks
+      - rm_cmd gnome-color-manager
+      - rm_cmd gnome-contacts
+      - rm_cmd gnome-font-viewer
+      - rm_cmd gnome-getting-started-docs
+      - rm_cmd gnome-keyring
+      - rm_cmd gnome-logs
+      - rm_cmd gnome-maps
+      - rm_cmd gnome-music
+      - rm_cmd gnome-photos
+      - rm_cmd gnome-software
+      - rm_cmd gnome-system-monitor
+      - rm_cmd gnome-user-docs
+      - rm_cmd gnome-video-effects
+      - rm_cmd gnome-weather
+      - rm_cmd yelp
+      - rm_cmd python
+      - rm_cmd chromium
+      - rm_cmd totem
+      - rm_cmd epiphany
+  install_gnome:
+    main:
+      - inst_cmd xorg
+      - inst_cmd xorg-server
+      - inst_cmd nano
+      - inst_cmd baobab
+      - inst_cmd eog
+      - inst_cmd evince
+      - inst_cmd file-roller
+      - inst_cmd gdm
+      - inst_cmd gedit
+      - inst_cmd gnome-backgrounds
+      - inst_cmd gnome-control-center
+      - inst_cmd gnome-menus
+      - inst_cmd gnome-remote-desktop
+      - inst_cmd gnome-session
+      - inst_cmd gnome-settings-daemon
+      - inst_cmd gnome-shell
+      - inst_cmd gnome-tweaks
+      - inst_cmd gnome-shell-extensions
+      - inst_cmd gnome-terminal
+      - inst_cmd gnome-themes-standard
+      - inst_cmd gnome-tweak-tool
+      - inst_cmd gnome-user-share
+      - inst_cmd grilo-plugins
+      - inst_cmd gvfs
+      - inst_cmd gvfs-afc
+      - inst_cmd gvfs-goa
+      - inst_cmd gvfs-google
+      - inst_cmd gvfs-gphoto2
+      - inst_cmd gvfs-ntp
+      - inst_cmd gvfs-nfs
+      - inst_cmd gvfs-smb
+      - inst_cmd malcontent
+      - inst_cmd mutter
+      - inst_cmd nautilus
+      - inst_cmd orca
+      - inst_cmd rygel
+      - inst_cmd tracker3-miners
+      - inst_cmd vino
+      - inst_cmd xdg-user-dirs-gtk
+      - inst_cmd grub
+      - inst_cmd grub-btrfs
+      - inst_cmd papirus-icon-them
+  set_grub_theme:
+    main:
+      - git clone https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes 
+      - cd Top-5-Bootloader-Themes
+      - sudo ./install.sh
+      - cd ../
+      - sudo rm -fr Top-5-Bootloader-Themes
+  install_jekyll:
+    main:
+     - echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
+     - echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
+     - echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+     - source ~/.bashrc
+     - echo '# Install Ruby Gems to ~/gems' >> ~/.zshrc
+     - echo 'export GEM_HOME="$HOME/gems"' >> ~/.zshrc
+     - echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.zshrc
+     - source ~/.zshrc
+     - gem install jekyll bundler
+    dependencies:
+      arch: ruby base-devel
+      debian: ruby-full build-essential
+      fedora: ruby ruby-devel openssl-devel redhat-rpm-config @development-tools
+  install_homebrew:
+    main:
+      - yes '' | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      - echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc
+      - echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zshrc
+    dependencies:
+      debian: build-essential procps file
+      fedora: procps-ng file libxcrypt-compat
+
+
+containers:
+  code_server: bash -c "$(https://raw.githubusercontent.com/SaracenRhue/setupTool/main/dockerScripts/code_server.sh)"
+  dashdot: bash -c "$(https://raw.githubusercontent.com/SaracenRhue/setupTool/main/dockerScripts/dashdot.sh)"
+  duckdnds: bash -c "$(https://raw.githubusercontent.com/SaracenRhue/setupTool/main/dockerScripts/duckdns.sh)"
+  filebot: bash -c "$(https://raw.githubusercontent.com/SaracenRhue/setupTool/main/dockerScripts/filebot.sh)"
+  firefox: bash -c "$(https://raw.githubusercontent.com/SaracenRhue/setupTool/main/dockerScripts/firefox.sh)"
+  guacamole: bash -c "$(https://raw.githubusercontent.com/SaracenRhue/setupTool/main/dockerScripts/guacamole.sh)"
+  heimdall: bash -c "$(https://raw.githubusercontent.com/SaracenRhue/setupTool/main/dockerScripts/heimdall.sh)"
+  kruader: bash -c "$(https://raw.githubusercontent.com/SaracenRhue/setupTool/main/dockerScripts/kruader.sh)"
+  mediainfo: bash -c "$(https://raw.githubusercontent.com/SaracenRhue/setupTool/main/dockerScripts/mediainfo.sh)"
+  nextcloud: bash -c "$(https://raw.githubusercontent.com/SaracenRhue/setupTool/main/dockerScripts/nextcloud.sh)"
+  nginx: bash -c "$(https://raw.githubusercontent.com/SaracenRhue/setupTool/main/dockerScripts/nginx.sh)"
+  plex: bash -c "$(https://raw.githubusercontent.com/SaracenRhue/setupTool/main/dockerScripts/plex.sh)"
+  portainer: bash -c "$(https://raw.githubusercontent.com/SaracenRhue/setupTool/main/dockerScripts/portainer.sh)"
+  organizr: bash -c "$(https://raw.githubusercontent.com/SaracenRhue/setupTool/main/dockerScripts/organizr.sh)"
+  resilio: bash -c "$(https://raw.githubusercontent.com/SaracenRhue/setupTool/main/dockerScripts/resilio.sh)"
