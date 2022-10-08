@@ -1,10 +1,15 @@
 from os import replace, system as cmd
 from os import listdir
+import sys
 
-tasks = listdir('./arch')
+arguments = sys.argv #returns a list of arguments
+arguments.pop(0) #remove the first argument (the script name)
+system = arguments[0]
+
+tasks = listdir(f'./{system}')
 tasks.sort()
 def trigger(index):
-    cmd('bash ./arch/'+tasks[index])
+    cmd(f'bash ./{system}/'+tasks[index])
     print(index)
 
 print('What tasks would you like to set up?')
