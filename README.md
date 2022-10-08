@@ -26,7 +26,7 @@ bash ./setuptool/start.sh
 or (doesn't work on windows):
 
 ```bash
-bash -c "$(curl https://raw.githubusercontent.com/SaracenRhue/setupTool/old/cstart.sh)"
+bash -c "$(curl https://raw.githubusercontent.com/SaracenRhue/setupTool/main/cstart.sh)"
 ```
 
 to install all input `all`
