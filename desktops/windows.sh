@@ -3,7 +3,7 @@
 # packages
 scoop bucket add java
 PKGS=(
-'python310'
+'python311'
 'nodejs'
 'go'
 'rust'
@@ -23,7 +23,6 @@ PKGS=(
 'github'
 'vlc'
 'pia-desktop'
-'wox'
 'bitwarden'
 '7zip'
 'winrar'

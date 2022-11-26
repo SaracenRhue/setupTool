@@ -5,10 +5,10 @@ yes '' | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/i
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zshrc
 source ~/.zshrc
 
-brew install python pyenv wget openjdk htop nodejs npm watchman go rust kotlin
+brew install python@3.11 pyenv wget openjdk htop nodejs npm watchman go rust kotlin
+alias python='python3.11'
+alias pip='pip3.11'
 source ~/.zshrc
-pyenv install 3.10.6
-pyenv global 3.10.6
 
 #zsh
 brew install zsh zsh-autosuggestions zsh-syntax-highlighting neofetch
