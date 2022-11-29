@@ -44,6 +44,7 @@ done
 
 # python modules
 PKGS=(
+'pick'
 'selenium'
 'eel'
 'pyautogui'

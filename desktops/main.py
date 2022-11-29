@@ -1,6 +1,7 @@
-from os import replace, system as cmd
+from os import system as cmd
 from os import listdir
 import sys
+from pick import pick
 
 arguments = sys.argv #returns a list of arguments
 arguments.pop(0) #remove the first argument (the script name)
@@ -10,21 +11,18 @@ tasks = listdir(f'./{system}')
 tasks.sort()
 def trigger(index):
     cmd(f'bash ./{system}/'+tasks[index])
-    print(index)
 
-print('What tasks would you like to set up?')
-for i in tasks:
-    print(str(tasks.index(i))+') '+tasks[tasks.index(i)].replace('.sh','').replace('_',' ').replace('#',''))
+options = []
+for i in range(len(tasks)):
+    options.append(tasks[i].replace('.sh','').replace('#','').replace('_', ' '))
 
-selection = str(input('> '))
+title = 'Choose options (press SPACE to mark, ENTER to continue): '
+selected = pick(options, title, multiselect=True, min_selection_count=0)
 
-if selection == 'all':
-    for i in tasks:
-        trigger(tasks.index(i))
-elif len(selection) == 1:
-    trigger(int(selection))
-else:
-    selection = [int(i) for i in selection.split() if i.isdigit()]
-    selection.sort()
-    for i in selection:
-        trigger(selection[selection.index(i)])
+indices = []
+for i in range(len(selected)):
+    index = selected[i][1]
+    indices.append(index)
+
+for i in indices:
+    trigger(i)

@@ -1,24 +1,23 @@
 from os import system as cmd
 from os import listdir
+from pick import pick
 
 containers = listdir('./dockerScripts')
+print(containers)
+options = []
+for i in range(len(containers)):
+    options.append(containers[i].replace('.sh',''))
+
+title = 'Choose options (press SPACE to mark, ENTER to continue): '
+selected = pick(options, title, multiselect=True, min_selection_count=0)
 
 def trigger(index):
     cmd('bash ./dockerScripts/'+containers[index])
-    print(index)
 
-print('What containers would you like to set up?')
-for i in containers:
-    print(str(containers.index(i))+') '+containers[containers.index(i)].replace('.sh',''))
+indices = []
+for i in range(len(selected)):
+    index = selected[i][1]
+    indices.append(index)
 
-selection = str(input('> '))
-
-if selection == 'all':
-    for i in containers:
-        trigger(containers.index(i))
-elif len(selection) == 1:
-    trigger(int(selection))
-else:
-    selection = [int(i) for i in selection.split() if i.isdigit()]
-    for i in selection:
-        trigger(selection[selection.index(i)])
+for i in indices:
+    trigger(i)
