@@ -12,7 +12,7 @@ title = 'Choose options (press SPACE to mark, ENTER to continue): '
 selected = pick(options, title, multiselect=True, min_selection_count=0)
 
 def trigger(index):
-    cmd('bash ./dockerScripts/'+containers[index])
+    cmd(f'bash ./dockerScripts/{containers[index]}')
 
 indices = []
 for i in range(len(selected)):

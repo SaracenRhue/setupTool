@@ -1,57 +1,5 @@
 #!/bin/bash
 
-# packages
 scoop bucket add java
-PKGS=(
-'python311'
-'nodejs'
-'go'
-'rust'
-'openjdk'
-'kotlin'
-)      
-for PKG in "${PKGS[@]}"; do
-    scoop install $PKG
-done
-
-# programs
-PKGS=(
-'vscode'
-'brave'
-'firefox'
-'discord'
-'github'
-'vlc'
-'pia-desktop'
-'bitwarden'
-'7zip'
-'winrar'
-'tor-browser'
-)
-for PKG in "${PKGS[@]}"; do
-    scoop install $PKG
-done
-
-# npm packages
-PKGS=(
-'typescript'
-'sass'
-'@angular/cli'
-)      
-for PKG in "${PKGS[@]}"; do
-    npm install -g $PKG
-done
-
-# python modules
-PKGS=(
-'pick'
-'selenium'
-'eel'
-'pyautogui'
-'pyyaml'
-'pygame'
-'Pillow'
-)      
-for PKG in "${PKGS[@]}"; do
-    pip3 install $PKG
-done
+scoop install python311
+python3 main.py windows

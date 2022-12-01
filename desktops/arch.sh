@@ -2,7 +2,7 @@
 
 sudo pacman -Syu --noconfirm
 
-packman -S --noconfirm wget curl python3 python-pip htop
+packman -S --noconfirm wget curl python3 python-pip htop papirus-icon-theme bash-completion
 pip3 install pick
 # yay setup
 sudo pacman -S --noconfirm base-devel

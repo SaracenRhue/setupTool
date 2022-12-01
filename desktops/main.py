@@ -10,7 +10,7 @@ system = arguments[0]
 tasks = listdir(f'./{system}')
 tasks.sort()
 def trigger(index):
-    cmd(f'bash ./{system}/'+tasks[index])
+    cmd(f'bash ./{system}/{tasks[index]}')
 
 options = []
 for i in range(len(tasks)):
