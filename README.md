@@ -58,6 +58,7 @@ to select multiple input `0 1 2 3`
 * heimdall `http://localhost:5080`
 * krusader `http://localhost:6080/vnc.html?resize=remote&host=localhost&port=6080&&autoconnect=1`
 * mediainfo `http://localhost:5877`
+* mc-server `http://server-ip:25565`
 * nextcloud `https://localhost:444`
 * nginx `http://localhost:7818`
 * organizr `http://localhost:9983`
