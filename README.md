@@ -29,9 +29,6 @@ or (doesn't work on windows):
 bash -c "$(curl https://raw.githubusercontent.com/SaracenRhue/setupTool/main/cstart.sh)"
 ```
 
-to install all input `all`
-to select multiple input `0 1 2 3`
-
 ## Features
 
 * setup zsh and neofetch
