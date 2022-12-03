@@ -11,117 +11,117 @@ nix = 'curl -L https://nixos.org/nix/install | sh && . ./home/$USER/.nix-profile
 
 inst = 'yay -S '
 arch = {
-    'vscode': inst+'visual-studio-code-bin',
-    'discord': inst+'discord',
-    'github': inst+'github-desktop-bin',
-    'gparted': inst+'gparted',
-    'krusader': inst+'krusader',
-    'nextcloud': inst+'nextcloud-client',
-    'firefox': inst+'firefox',
-    'brave': inst+'brave-browser',
-    'vlc': inst+'vlc',
-    'tor': inst+'tor-browser',
+    'vscode': f'{inst}visual-studio-code-bin',
+    'discord': f'{inst}discord',
+    'github': f'{inst}github-desktop-bin',
+    'gparted': f'{inst}gparted',
+    'krusader': f'{inst}krusader',
+    'nextcloud': f'{inst}nextcloud-client',
+    'firefox': f'{inst}firefox',
+    'brave': f'{inst}brave-browser',
+    'vlc': f'{inst}vlc',
+    'tor': f'{inst}tor-browser',
     'pia': 'wget https://insters.privateinternetaccess.com/download/pia-linux-3.3.1-06924.run && sh pia-linux-3.3.1-06924.run && sudo rm -fr pia-linux-3.3.1-06924.run',
-    'zoom': inst+'zoom',
-    'nodejs': inst+'nodejs npm',
-    'java': inst+'jre-openjdk',
-    'virsh': inst+'libvirt',
-    'tree': inst+'tree',
-    'timeshift': inst+'grub grub-btrfrs timeshift',
-    'cmatrix': inst+'cmatrix',
+    'zoom': f'{inst}zoom',
+    'nodejs': f'{inst}nodejs npm',
+    'java': f'{inst}jre-openjdk',
+    'virsh': f'{inst}libvirt',
+    'tree': f'{inst}tree',
+    'timeshift': f'{inst}grub grub-btrfrs timeshift',
+    'cmatrix': f'{inst}cmatrix',
 }
 
 inst = 'nix-env -iA nixpkgs.'
 debian = {
-    'vscode': inst+'vscode',
-    'discord': inst+'discord',
-    'github': inst+'github-desktop',
-    'gparted': inst+'gparted',
-    'krusader': inst+'krusader',
-    'nextcloud': inst+'nextcloud-client',
-    'firefox': inst+'firefox',
-    'brave': inst+'brave',
-    'vlc': inst+'vlc',
-    'tor': inst+'tor-browser',
-    'pia': inst+'private-internet-access',
-    'zoom': inst+'zoom',
-    'nodejs': inst+'nodejs && '+inst+'nodePackages.npm',
-    'java': inst+'jre8',
-    'virsh': inst+'libvirt',
-    'tree': inst+'tree',
-    'timeshift': inst+'timeshift',
-    'cmatrix': inst+'cmatrix',
+    'vscode': f'{inst}vscode',
+    'discord': f'{inst}discord',
+    'github': f'{inst}github-desktop',
+    'gparted': f'{inst}gparted',
+    'krusader': f'{inst}krusader',
+    'nextcloud': f'{inst}nextcloud-client',
+    'firefox': f'{inst}firefox',
+    'brave': f'{inst}brave',
+    'vlc': f'{inst}vlc',
+    'tor': f'{inst}tor-browser',
+    'pia': f'{inst}private-internet-access',
+    'zoom': f'{inst}zoom',
+    'nodejs': f'{inst}nodejs && {inst}nodePackages.npm',
+    'java': f'{inst}jre8',
+    'virsh': f'{inst}libvirt',
+    'tree': f'{inst}tree',
+    'timeshift': f'{inst}timeshift',
+    'cmatrix': f'{inst}cmatrix',
     }
 
 inst = 'nix-env -iA nixpkgs.'
 fedora = {
-    'vscode': inst+'vscode',
-    'discord': inst+'discord',
-    'github': inst+'github-desktop',
-    'gparted': inst+'gparted',
-    'krusader': inst+'krusader',
-    'nextcloud': inst+'nextcloud-client',
-    'firefox': inst+'firefox',
-    'brave': inst+'brave',
-    'vlc': inst+'vlc',
-    'tor': inst+'tor-browser',
-    'pia': inst+'private-internet-access',
-    'zoom': inst+'zoom',
-    'nodejs': inst+'nodejs && '+inst+'nodePackages.npm',
-    'java': inst+'jre8',
-    'virsh': inst+'libvirt',
-    'tree': inst+'tree',
-    'timeshift': inst+'timeshift',
-    'cmatrix': inst+'cmatrix',
+    'vscode': f'{inst}vscode',
+    'discord': f'{inst}discord',
+    'github': f'{inst}github-desktop',
+    'gparted': f'{inst}gparted',
+    'krusader': f'{inst}krusader',
+    'nextcloud': f'{inst}nextcloud-client',
+    'firefox': f'{inst} irefox',
+    'brave': f'{inst}brave',
+    'vlc': f'{inst}vlc',
+    'tor': f'{inst}tor-browser',
+    'pia': f'{inst}private-internet-access',
+    'zoom': f'{inst}zoom',
+    'nodejs': f'{inst}nodejs && {inst}nodePackages.npm',
+    'java': f'{inst}jre8',
+    'virsh': f'{inst}libvirt',
+    'tree': f'{inst}tree',
+    'timeshift': f'{inst}timeshift',
+    'cmatrix': f'{inst}cmatrix',
     }
 
 inst = 'brew install '
 mac = {
-    'vscode': inst+'--cask visual-studio-code',
-    'discord': inst+'--cask discord',
-    'github': inst+'--cask github',
-    'nodejs': inst+'nodejs npm',
-    'java': inst+'openjdk',
-    'go': inst+'go',
-    'rust': inst+ 'rust',
-    'kotlin': inst+ 'kotlin',
+    'vscode': f'{inst}--cask visual-studio-code',
+    'discord': f'{inst}--cask discord',
+    'github': f'{inst}--cask github',
+    'nodejs': f'{inst}nodejs npm',
+    'java': f'{inst}openjdk',
+    'go': f'{inst}go',
+    'rust': f'{inst}rust',
+    'kotlin': f'{inst}kotlin',
 
 }
 
 inst = 'scoop install '
 windows = {
-    'vscode': inst+'vscode',
-    'discord': inst+'discord',
-    'github': inst+'github',
-    'firefox': inst+'firefox',
-    'brave': inst+'brave',
-    'tor': inst+'tor',
-    'vlc': inst+'vlc',
-    'nodejs': inst+'nodejs',
-    'java': inst+'java',
-    'go': inst+'go',
-    'rust': inst+ 'rust',
-    'kotlin': inst+ 'kotlin',
+    'vscode': f'{inst}vscode',
+    'discord': f'{inst}discord',
+    'github': f'{inst}github',
+    'firefox': f'{inst}firefox',
+    'brave': f'{inst}brave',
+    'tor': f'{inst}tor',
+    'vlc': f'{inst}vlc',
+    'nodejs': f'{inst}nodejs',
+    'java': f'{inst}java',
+    'go': f'{inst}go',
+    'rust': f'{inst}rust',
+    'kotlin': f'{inst}kotlin',
 
 }
 
 inst = 'pip3 install '
 pip = {
-    'yaml': inst+'pyyaml',
-    'pick': inst+'pick',
-    'eel': inst+'eel',
-    'icecream': inst+'icecream',
-    'discord': inst+'discord',
-    'selenium': inst+'selenium',
-    'pyautogui': inst+'pyautogui',
-    'pygame': inst+'pygame'
+    'yaml': f'{inst}pyyaml',
+    'pick': f'{inst}pick',
+    'eel': f'{inst}eel',
+    'icecream': f'{inst}icecream',
+    'discord': f'{inst}discord',
+    'selenium': f'{inst}selenium',
+    'pyautogui': f'{inst}pyautogui',
+    'pygame': f'{inst}pygame'
 }
 
 inst = 'npm install -g '
 npm = {
-    'typescript': inst+'typescript',
-    'sass': inst+'sass',
-    'angular': inst+'@angular/cli',
+    'typescript': f'{inst}typescript',
+    'sass': f'{inst}sass',
+    'angular': f'{inst}@angular/cli',
 }
 
 if system == 'arch':
@@ -140,6 +140,7 @@ if system == 'pip':
     options = list(pip.keys())
 if system == 'npm':
     options = list(npm.keys())
+    cmd(inst+'nodejs && '+inst+'nodePackages.npm')
 
 
 title = 'Choose options (press SPACE to mark, ENTER to continue): '
