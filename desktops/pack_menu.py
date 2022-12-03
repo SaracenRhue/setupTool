@@ -45,7 +45,7 @@ debian = {
     'tor': inst+'tor-browser',
     'pia': inst+'private-internet-access',
     'zoom': inst+'zoom',
-    'nodejs': inst+'nodejs',
+    'nodejs': inst+'nodejs && '+inst+'nodePackages.npm',
     'java': inst+'jre8',
     'virsh': inst+'libvirt',
     'tree': inst+'tree',
@@ -67,7 +67,7 @@ fedora = {
     'tor': inst+'tor-browser',
     'pia': inst+'private-internet-access',
     'zoom': inst+'zoom',
-    'nodejs': inst+'nodejs',
+    'nodejs': inst+'nodejs && '+inst+'nodePackages.npm',
     'java': inst+'jre8',
     'virsh': inst+'libvirt',
     'tree': inst+'tree',
@@ -140,7 +140,7 @@ if system == 'pip':
     options = list(pip.keys())
 if system == 'npm':
     options = list(npm.keys())
-    
+
 
 title = 'Choose options (press SPACE to mark, ENTER to continue): '
 selected = pick(options, title, multiselect=True, min_selection_count=0)
