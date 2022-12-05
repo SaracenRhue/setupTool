@@ -30,7 +30,7 @@ yay = {
     'timeshift': f'{inst}grub grub-btrfrs timeshift',
     'cmatrix': f'{inst}cmatrix',
 }
-yay.update({'install everything': ' && '.join(list(yay.values()))})
+yay.update({'everything': ' && '.join(list(yay.values()))})
 
 
 inst = 'nix-env -iA nixpkgs.'
@@ -54,7 +54,7 @@ nix = {
     'timeshift': f'{inst}timeshift',
     'cmatrix': f'{inst}cmatrix',
     }
-nix.update({'install everything': ' && '.join(list(nix.values()))})
+nix.update({'everything': ' && '.join(list(nix.values()))})
 
 
 inst = 'brew install '
@@ -69,7 +69,7 @@ brew = {
     'rust': f'{inst}rust',
     'kotlin': f'{inst}kotlin',
 }
-brew.update({'install everything': ' && '.join(list(brew.values()))})
+brew.update({'everything': ' && '.join(list(brew.values()))})
 
 
 inst = 'scoop install '
@@ -89,7 +89,7 @@ scoop = {
     'rust': f'{inst}rust',
     'kotlin': f'{inst}kotlin',
 }
-scoop.update({'install everything': ' && '.join(list(scoop.values()))})
+scoop.update({'everything': ' && '.join(list(scoop.values()))})
 
 
 inst = 'pip3 install '
@@ -103,7 +103,7 @@ pip = {
     'pyautogui': f'{inst}pyautogui',
     'pygame': f'{inst}pygame'
 }
-pip.update({'install everything': ' && '.join(list(pip.values()))})
+pip.update({'everything': ' && '.join(list(pip.values()))})
 
 
 inst = 'npm install -g '
@@ -112,7 +112,7 @@ npm = {
     'sass': f'{inst}sass',
     'angular': f'{inst}@angular/cli',
 }
-npm.update({'install everything': ' && '.join(list(npm.values()))})
+npm.update({'everything': ' && '.join(list(npm.values()))})
 
 if system == 'arch':
     options = list(yay.keys())
@@ -139,8 +139,8 @@ for i in range(len(selected)):
     key = selected[i][0]
     keys.append(key)
 
-if 'install everything' in keys:
-    cmd(eval(f'{system}[install everything]'))
+if 'everything' in keys:
+    cmd(eval(f'{system}[everything]'))
 else:
     for key in keys:
         cmd(eval(f'{system}[key]'))
