@@ -6,11 +6,11 @@ arguments = sys.argv #returns a list of arguments
 arguments.pop(0) #remove the first argument (the script name)
 system = arguments[0]
 
-nix = 'curl -L https://nixos.org/nix/install | sh && . ./home/$USER/.nix-profile/etc/profile.d/nix.sh && echo "export NIXPKGS_ALLOW_UNFREE=1" >> ~/.zshrc && export NIXPKGS_ALLOW_UNFREE=1'
+nix_install = 'curl -L https://nixos.org/nix/install | sh && . ./home/$USER/.nix-profile/etc/profile.d/nix.sh && echo "export NIXPKGS_ALLOW_UNFREE=1" >> ~/.zshrc && export NIXPKGS_ALLOW_UNFREE=1'
 
 
 inst = 'yay -S '
-arch = {
+yay = {
     'vscode': f'{inst}visual-studio-code-bin',
     'discord': f'{inst}discord',
     'github': f'{inst}github-desktop-bin',
@@ -21,7 +21,7 @@ arch = {
     'brave': f'{inst}brave-browser',
     'vlc': f'{inst}vlc',
     'tor': f'{inst}tor-browser',
-    'pia': 'wget https://insters.privateinternetaccess.com/download/pia-linux-3.3.1-06924.run && sh pia-linux-3.3.1-06924.run && sudo rm -fr pia-linux-3.3.1-06924.run',
+    'pia': f'{inst}private-internet-access-vpn',
     'zoom': f'{inst}zoom',
     'nodejs': f'{inst}nodejs npm',
     'java': f'{inst}jre-openjdk',
@@ -32,7 +32,7 @@ arch = {
 }
 
 inst = 'nix-env -iA nixpkgs.'
-debian = {
+nix = {
     'vscode': f'{inst}vscode',
     'discord': f'{inst}discord',
     'github': f'{inst}github-desktop',
@@ -40,28 +40,6 @@ debian = {
     'krusader': f'{inst}krusader',
     'nextcloud': f'{inst}nextcloud-client',
     'firefox': f'{inst}firefox',
-    'brave': f'{inst}brave',
-    'vlc': f'{inst}vlc',
-    'tor': f'{inst}tor-browser',
-    'pia': f'{inst}private-internet-access',
-    'zoom': f'{inst}zoom',
-    'nodejs': f'{inst}nodejs && {inst}nodePackages.npm',
-    'java': f'{inst}jre8',
-    'virsh': f'{inst}libvirt',
-    'tree': f'{inst}tree',
-    'timeshift': f'{inst}timeshift',
-    'cmatrix': f'{inst}cmatrix',
-    }
-
-inst = 'nix-env -iA nixpkgs.'
-fedora = {
-    'vscode': f'{inst}vscode',
-    'discord': f'{inst}discord',
-    'github': f'{inst}github-desktop',
-    'gparted': f'{inst}gparted',
-    'krusader': f'{inst}krusader',
-    'nextcloud': f'{inst}nextcloud-client',
-    'firefox': f'{inst} irefox',
     'brave': f'{inst}brave',
     'vlc': f'{inst}vlc',
     'tor': f'{inst}tor-browser',
@@ -76,10 +54,11 @@ fedora = {
     }
 
 inst = 'brew install '
-mac = {
+brew = {
     'vscode': f'{inst}--cask visual-studio-code',
     'discord': f'{inst}--cask discord',
     'github': f'{inst}--cask github',
+    #'cmdLine-tools': 'xcode-select --install',
     'nodejs': f'{inst}nodejs npm',
     'java': f'{inst}openjdk',
     'go': f'{inst}go',
@@ -89,7 +68,7 @@ mac = {
 }
 
 inst = 'scoop install '
-windows = {
+scoop = {
     'vscode': f'{inst}vscode',
     'discord': f'{inst}discord',
     'github': f'{inst}github',
@@ -97,6 +76,8 @@ windows = {
     'brave': f'{inst}brave',
     'tor': f'{inst}tor',
     'vlc': f'{inst}vlc',
+    'zoom': f'{inst}zoom',
+    'gcc': f'{inst}gcc',
     'nodejs': f'{inst}nodejs',
     'java': f'{inst}java',
     'go': f'{inst}go',
@@ -125,22 +106,21 @@ npm = {
 }
 
 if system == 'arch':
-    options = list(arch.keys())
-if system == 'debian':
-    options = list(debian.keys())
-    cmd(nix)
-if system == 'fedora':
-    options = list(fedora.keys())
-    cmd(nix)
-if system == 'mac':
-    options = list(mac.keys())
-if system == 'windows':
-    options = list(windows.keys())
-if system == 'pip':
+    options = list(yay.keys())
+elif system == 'debian':
+    options = list(nix.keys())
+    cmd(nix_install)
+elif system == 'fedora':
+    options = list(nix.keys())
+    cmd(nix_install)
+elif system == 'mac':
+    options = list(brew.keys())
+elif system == 'windows':
+    options = list(scoop.keys())
+elif system == 'pip':
     options = list(pip.keys())
-if system == 'npm':
+elif system == 'npm':
     options = list(npm.keys())
-    cmd(inst+'nodejs && '+inst+'nodePackages.npm')
 
 
 title = 'Choose options (press SPACE to mark, ENTER to continue): '
