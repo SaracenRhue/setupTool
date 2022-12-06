@@ -35,7 +35,8 @@ bash -c "$(curl https://raw.githubusercontent.com/SaracenRhue/setupTool/main/cst
 * install yay for AUR
 * install nix for Debian and Fedora
 * setup homebrew for Debian Fedora and MacOS
-* setup docker for Debian and Fedora (with a selection of Containers to install)e
+* setup docker for Debian and Fedora (with a selection of Containers to install)
+* install pip and npm packages
 * change your grub theme ([ChrisTitusTech/Top-5-Bootloader-Themes](https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes))
 * (re)install linux graphic drivers
 * enable Debian root user
@@ -69,4 +70,4 @@ to setup nginx forward port `80` to `1880` and `443` to `18443` on your router
 You can add new features by adding a new .sh file into the distro folder.
 the menu gets generated automaticly by reading the filenames in that folder.
 (use _ for spaces in your filenames)<br/>
-If you want to change the menu order you can add a # in front of the filename.
+If you want to change the menu order you can add a `#` in front of the filename.

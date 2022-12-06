@@ -59,10 +59,13 @@ nix.update({'everything': ' && '.join(list(nix.values()))})
 
 inst = 'brew install '
 brew = {
-    'vscode': f'{inst}--cask visual-studio-code',
+    'alfred': f'{inst}--cask alfred',
     'discord': f'{inst}--cask discord',
     'github': f'{inst}--cask github',
+    'iTerm2': f'{inst}--cask iterm2',
+    'vscode': f'{inst}--cask visual-studio-code',
     #'cmdLine-tools': 'xcode-select --install',
+    'docker': f'{inst}docker docker-compose',
     'nodejs': f'{inst}nodejs npm',
     'java': f'{inst}openjdk',
     'go': f'{inst}go',
@@ -76,6 +79,7 @@ inst = 'scoop install '
 scoop = {
     'vscode': f'{inst}vscode',
     'discord': f'{inst}discord',
+    'docker': f'{inst}docker && {inst}docker-compose',
     'github': f'{inst}github',
     'firefox': f'{inst}firefox',
     'brave': f'{inst}brave',
