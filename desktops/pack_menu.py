@@ -30,6 +30,7 @@ yay = {
     'timeshift': f'{inst}grub grub-btrfrs timeshift',
     'cmatrix': f'{inst}cmatrix',
 }
+yay = dict(sorted(yay.items(), key=lambda item: item[1]))
 yay.update({'everything': ' && '.join(list(yay.values()))})
 
 
@@ -52,8 +53,10 @@ nix = {
     'virsh': f'{inst}libvirt',
     'tree': f'{inst}tree',
     'timeshift': f'{inst}timeshift',
+    'sshpass': f'{inst}sshpass',
     'cmatrix': f'{inst}cmatrix',
     }
+nix = dict(sorted(nix.items(), key=lambda item: item[1]))
 nix.update({'everything': ' && '.join(list(nix.values()))})
 
 
@@ -72,6 +75,7 @@ brew = {
     'rust': f'{inst}rust',
     'kotlin': f'{inst}kotlin',
 }
+brew = dict(sorted(brew.items(), key=lambda item: item[1]))
 brew.update({'everything': ' && '.join(list(brew.values()))})
 
 
@@ -93,6 +97,7 @@ scoop = {
     'rust': f'{inst}rust',
     'kotlin': f'{inst}kotlin',
 }
+scoop = dict(sorted(scoop.items(), key=lambda item: item[1]))
 scoop.update({'everything': ' && '.join(list(scoop.values()))})
 
 
@@ -107,6 +112,7 @@ pip = {
     'pyautogui': f'{inst}pyautogui',
     'pygame': f'{inst}pygame'
 }
+pip = dict(sorted(pip.items(), key=lambda item: item[1]))
 pip.update({'everything': ' && '.join(list(pip.values()))})
 
 
@@ -116,6 +122,7 @@ npm = {
     'sass': f'{inst}sass',
     'angular': f'{inst}@angular/cli',
 }
+npm = dict(sorted(npm.items(), key=lambda item: item[1]))
 npm.update({'everything': ' && '.join(list(npm.values()))})
 
 if system == 'arch':
