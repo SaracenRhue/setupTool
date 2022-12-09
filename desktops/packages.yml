@@ -77,4 +77,4 @@ pip:
 npm:
   typescript: typescript
   sass: sass
-  angular: @angular/cli
+  angular: '@angular/cli'

@@ -6,7 +6,7 @@ import yaml
 with open('packages.yml', 'r') as file:
     data = yaml.safe_load(file)
 
-def get_dic(key):
+def get_dic(inst, key):
     dic = data[key]
     dic = dict(sorted(dic.items(), key=lambda item: item[1]))
     dic.update({'everything': ' && '.join(list(dic.values()))})
@@ -20,23 +20,12 @@ system = arguments[0]
 nix_install = 'curl -L https://nixos.org/nix/install | sh && . ./home/$USER/.nix-profile/etc/profile.d/nix.sh && echo "export NIXPKGS_ALLOW_UNFREE=1" >> ~/.zshrc && export NIXPKGS_ALLOW_UNFREE=1'
 
 
-inst = 'yay -S '
-yay = get_dic('yay')
-
-inst = 'nix-env -iA nixpkgs.'
-nix = get_dic('nix')
-
-inst = 'brew install '
-brew = get_dic('brew')
-
-inst = 'scoop install '
-scoop = get_dic('scoop')
-
-inst = 'pip3 install '
-pip = get_dic('pip')
-
-inst = 'npm install -g '
-npm = get_dic('npm')
+yay = get_dic('yay -S ', 'yay')
+nix = get_dic('nix-env -iA nixpkgs.', 'nix')
+brew = get_dic('brew install ', 'brew')
+scoop = get_dic('scoop install ', 'scoop')
+pip = get_dic('pip3 install ', 'pip')
+npm = get_dic('npm install -g ', 'npm')
 
 
 if system == 'arch':
