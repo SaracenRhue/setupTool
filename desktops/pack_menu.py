@@ -3,55 +3,40 @@ from os import system as cmd
 from pick import pick
 import yaml
 
+with open('packages.yml', 'r') as file:
+    data = yaml.safe_load(file)
+
+def get_dic(key):
+    dic = data[key]
+    dic = dict(sorted(dic.items(), key=lambda item: item[1]))
+    dic.update({'everything': ' && '.join(list(dic.values()))})
+    for item in dic: dic[item] = inst+dic[item]
+    return dic
+
 arguments = sys.argv #returns a list of arguments
 arguments.pop(0) #remove the first argument (the script name)
 system = arguments[0]
 
 nix_install = 'curl -L https://nixos.org/nix/install | sh && . ./home/$USER/.nix-profile/etc/profile.d/nix.sh && echo "export NIXPKGS_ALLOW_UNFREE=1" >> ~/.zshrc && export NIXPKGS_ALLOW_UNFREE=1'
-with open('packages.yml', 'r') as file:
-    data = yaml.safe_load(file)
 
 
 inst = 'yay -S '
-yay = data['yay']
-yay = dict(sorted(yay.items(), key=lambda item: item[1]))
-yay.update({'everything': ' && '.join(list(yay.values()))})
-for item in yay: yay[item] = inst+yay[item]
-
+yay = get_dic('yay')
 
 inst = 'nix-env -iA nixpkgs.'
-nix = data['nix']
-nix = dict(sorted(nix.items(), key=lambda item: item[1]))
-nix.update({'everything': ' && '.join(list(nix.values()))})
-for item in nix: nix[item] = inst+nix[item]
-
+nix = get_dic('nix')
 
 inst = 'brew install '
-brew = data['brew']
-brew = dict(sorted(brew.items(), key=lambda item: item[1]))
-brew.update({'everything': ' && '.join(list(brew.values()))})
-for item in brew: brew[item] = inst+brew[item]
-
+brew = get_dic('brew')
 
 inst = 'scoop install '
-scoop = data['scoop']
-scoop = dict(sorted(scoop.items(), key=lambda item: item[1]))
-scoop.update({'everything': ' && '.join(list(scoop.values()))})
-for item in scoop: scoop[item] = inst+scoop[item]
-
+scoop = get_dic('scoop')
 
 inst = 'pip3 install '
-pip = data['pip']
-pip = dict(sorted(pip.items(), key=lambda item: item[1]))
-pip.update({'everything': ' && '.join(list(pip.values()))})
-for item in pip: pip[item] = inst+pip[item]
-
+pip = get_dic('pip')
 
 inst = 'npm install -g '
-npm = data['npm']
-npm = dict(sorted(npm.items(), key=lambda item: item[1]))
-npm.update({'everything': ' && '.join(list(npm.values()))})
-for item in npm: npm[item] = inst+npm[item]
+npm = get_dic('npm')
 
 
 if system == 'arch':
