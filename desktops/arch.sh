@@ -3,7 +3,7 @@
 sudo pacman -Syu --noconfirm
 
 packman -S --noconfirm wget curl python3 python-pip htop papirus-icon-theme bash-completion
-pip3 install pick
+pip3 install pick pyyaml
 # yay setup
 sudo pacman -S --noconfirm base-devel
 sudo git clone https://aur.archlinux.org/yay.git

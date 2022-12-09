@@ -1,0 +1,80 @@
+yay:
+  vscode: visual-studio-code-bin
+  discord: discord
+  github: github-desktop-bin
+  gparted: gparted
+  krusader: krusader
+  nextcloud: nextcloud-client
+  firefox: firefox
+  brave: brave-browser
+  vlc: vlc
+  tor: tor-browser
+  pia: private-internet-access-vpn
+  zoom: zoom
+  nodejs: nodejs npm
+  java: jre-openjdk
+  virsh: libvirt
+  tree: tree
+  timeshift: grub grub-btrfrs timeshift
+  cmatrix: cmatrix
+nix:
+  vscode: vscode
+  discord: discord
+  github: github-desktop
+  gparted: gparted
+  krusader: krusader
+  nextcloud: nextcloud-client
+  firefox: firefox
+  brave: brave
+  vlc: vlc
+  tor: tor-browser
+  pia: private-internet-access
+  zoom: zoom
+  nodejs: nodejs nodePackages.npm
+  java: jre8
+  virsh: libvirt
+  tree: tree
+  timeshift: timeshift
+  sshpass: sshpass
+  cmatrix: cmatrix
+brew:
+  alfred: --cask alfred
+  discord: --cask discord
+  github: --cask github
+  iTerm2: --cask iterm2
+  vscode: --cask visual-studio-code
+  docker: docker docker-compose
+  nodejs: nodejs npm
+  java: openjdk
+  go: go
+  rust: rust
+  kotlin: kotlin
+scoop:
+  vscode: vscode
+  discord: discord
+  docker: docker docker-compose
+  github: github
+  firefox: firefox
+  brave: brave
+  tor: tor
+  vlc: vlc
+  zoom: zoom
+  gcc: gcc
+  nodejs: nodejs
+  java: java
+  go: go
+  rust: rust
+  kotlin: kotlin
+pip:
+  yaml: pyyaml
+  pick: pick
+  eel: eel
+  icecream: icecream
+  discord: discord
+  selenium: selenium
+  pyautogui: pyautogui
+  pygame: pygame
+npm:
+  typescript: typescript
+  sass: sass
+  angular: @angular/cli

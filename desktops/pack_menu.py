@@ -1,129 +1,58 @@
 import sys
 from os import system as cmd
 from pick import pick
+import yaml
 
 arguments = sys.argv #returns a list of arguments
 arguments.pop(0) #remove the first argument (the script name)
 system = arguments[0]
 
 nix_install = 'curl -L https://nixos.org/nix/install | sh && . ./home/$USER/.nix-profile/etc/profile.d/nix.sh && echo "export NIXPKGS_ALLOW_UNFREE=1" >> ~/.zshrc && export NIXPKGS_ALLOW_UNFREE=1'
+with open('packages.yml', 'r') as file:
+    data = yaml.safe_load(file)
 
 
 inst = 'yay -S '
-yay = {
-    'vscode': f'{inst}visual-studio-code-bin',
-    'discord': f'{inst}discord',
-    'github': f'{inst}github-desktop-bin',
-    'gparted': f'{inst}gparted',
-    'krusader': f'{inst}krusader',
-    'nextcloud': f'{inst}nextcloud-client',
-    'firefox': f'{inst}firefox',
-    'brave': f'{inst}brave-browser',
-    'vlc': f'{inst}vlc',
-    'tor': f'{inst}tor-browser',
-    'pia': f'{inst}private-internet-access-vpn',
-    'zoom': f'{inst}zoom',
-    'nodejs': f'{inst}nodejs npm',
-    'java': f'{inst}jre-openjdk',
-    'virsh': f'{inst}libvirt',
-    'tree': f'{inst}tree',
-    'timeshift': f'{inst}grub grub-btrfrs timeshift',
-    'cmatrix': f'{inst}cmatrix',
-}
+yay = data['yay']
 yay = dict(sorted(yay.items(), key=lambda item: item[1]))
 yay.update({'everything': ' && '.join(list(yay.values()))})
+for item in yay: yay[item] = inst+yay[item]
 
 
 inst = 'nix-env -iA nixpkgs.'
-nix = {
-    'vscode': f'{inst}vscode',
-    'discord': f'{inst}discord',
-    'github': f'{inst}github-desktop',
-    'gparted': f'{inst}gparted',
-    'krusader': f'{inst}krusader',
-    'nextcloud': f'{inst}nextcloud-client',
-    'firefox': f'{inst}firefox',
-    'brave': f'{inst}brave',
-    'vlc': f'{inst}vlc',
-    'tor': f'{inst}tor-browser',
-    'pia': f'{inst}private-internet-access',
-    'zoom': f'{inst}zoom',
-    'nodejs': f'{inst}nodejs && {inst}nodePackages.npm',
-    'java': f'{inst}jre8',
-    'virsh': f'{inst}libvirt',
-    'tree': f'{inst}tree',
-    'timeshift': f'{inst}timeshift',
-    'sshpass': f'{inst}sshpass',
-    'cmatrix': f'{inst}cmatrix',
-    }
+nix = data['nix']
 nix = dict(sorted(nix.items(), key=lambda item: item[1]))
 nix.update({'everything': ' && '.join(list(nix.values()))})
+for item in nix: nix[item] = inst+nix[item]
 
 
 inst = 'brew install '
-brew = {
-    'alfred': f'{inst}--cask alfred',
-    'discord': f'{inst}--cask discord',
-    'github': f'{inst}--cask github',
-    'iTerm2': f'{inst}--cask iterm2',
-    'vscode': f'{inst}--cask visual-studio-code',
-    #'cmdLine-tools': 'xcode-select --install',
-    'docker': f'{inst}docker docker-compose',
-    'nodejs': f'{inst}nodejs npm',
-    'java': f'{inst}openjdk',
-    'go': f'{inst}go',
-    'rust': f'{inst}rust',
-    'kotlin': f'{inst}kotlin',
-}
+brew = data['brew']
 brew = dict(sorted(brew.items(), key=lambda item: item[1]))
 brew.update({'everything': ' && '.join(list(brew.values()))})
+for item in brew: brew[item] = inst+brew[item]
 
 
 inst = 'scoop install '
-scoop = {
-    'vscode': f'{inst}vscode',
-    'discord': f'{inst}discord',
-    'docker': f'{inst}docker && {inst}docker-compose',
-    'github': f'{inst}github',
-    'firefox': f'{inst}firefox',
-    'brave': f'{inst}brave',
-    'tor': f'{inst}tor',
-    'vlc': f'{inst}vlc',
-    'zoom': f'{inst}zoom',
-    'gcc': f'{inst}gcc',
-    'nodejs': f'{inst}nodejs',
-    'java': f'{inst}java',
-    'go': f'{inst}go',
-    'rust': f'{inst}rust',
-    'kotlin': f'{inst}kotlin',
-}
+scoop = data['scoop']
 scoop = dict(sorted(scoop.items(), key=lambda item: item[1]))
 scoop.update({'everything': ' && '.join(list(scoop.values()))})
+for item in scoop: scoop[item] = inst+scoop[item]
 
 
 inst = 'pip3 install '
-pip = {
-    'yaml': f'{inst}pyyaml',
-    'pick': f'{inst}pick',
-    'eel': f'{inst}eel',
-    'icecream': f'{inst}icecream',
-    'discord': f'{inst}discord',
-    'selenium': f'{inst}selenium',
-    'pyautogui': f'{inst}pyautogui',
-    'pygame': f'{inst}pygame'
-}
+pip = data['pip']
 pip = dict(sorted(pip.items(), key=lambda item: item[1]))
 pip.update({'everything': ' && '.join(list(pip.values()))})
+for item in pip: pip[item] = inst+pip[item]
 
 
 inst = 'npm install -g '
-npm = {
-    'typescript': f'{inst}typescript',
-    'sass': f'{inst}sass',
-    'angular': f'{inst}@angular/cli',
-}
+npm = data['npm']
 npm = dict(sorted(npm.items(), key=lambda item: item[1]))
 npm.update({'everything': ' && '.join(list(npm.values()))})
+for item in npm: npm[item] = inst+npm[item]
+
 
 if system == 'arch':
     options = list(yay.keys())

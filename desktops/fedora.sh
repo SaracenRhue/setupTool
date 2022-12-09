@@ -3,7 +3,7 @@
 #update system
 sudo dnf -y update && sudo dnf -y upgrade
 sudo dnf install -y python3 python3-pip curl wget htop
-pip3 install pick
+pip3 install pick pyyaml
 if [ -n "$ZSH_VERSION" ]; then
     sudo dnf install -y zsh zsh-autosuggestions zsh-syntax-highlighting neofetch
     echo "plugins=(zsh-autosuggestions)" >> ~/.zshrc

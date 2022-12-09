@@ -19,4 +19,5 @@ echo "neofetch" >> ~/.zshrc
 
 alias python3='python3.11'
 alias pip3='pip3.11'
+pip3 install pick pyyaml
 python main.py mac

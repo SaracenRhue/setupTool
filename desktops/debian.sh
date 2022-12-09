@@ -5,7 +5,7 @@ sudo apt upgrade -y
 sudo apt autoremove -y
 sudo apt remove python -y
 sudo apt install python3 pip wget curl htop -y
-pip3 install pick
+pip3 install pick pyyaml
 
 if [ -n "$ZSH_VERSION" ]; then
     sudo apt install -y zsh zsh-autosuggestions zsh-syntax-highlighting neofetch
