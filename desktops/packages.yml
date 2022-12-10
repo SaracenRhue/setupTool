@@ -69,6 +69,7 @@ pip:
   yaml: pyyaml
   pick: pick
   eel: eel
+  bs4: beautifulsoup4
   icecream: icecream
   discord: discord
   selenium: selenium

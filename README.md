@@ -67,7 +67,7 @@ to setup nginx forward port `80` to `1880` and `443` to `18443` on your router
 
 ### Developers
 
-You can add new features by adding a new .sh file into the distro folder.
+You can add new features by adding a new `.sh` file into the distro folder.
 the menu gets generated automaticly by reading the filenames in that folder.
-(use _ for spaces in your filenames)<br/>
+(use `_` for spaces in your filenames)<br/>
 If you want to change the menu order you can add a `#` in front of the filename.
