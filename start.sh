@@ -20,24 +20,9 @@ EOF
         "4")bash ./windows.sh;;
      * )  echo "invalid option" ;;
     esac
+    
     sleep 1
-
 cd
-    #clear
-    cat<<EOF
-    Do you want to setup the project creator script?:
-     (0) yes
-     (1) no
-EOF
-    read -n1 -s
-    case "$REPLY" in
-        "0")bash -c "$(curl https://raw.githubusercontent.com/SaracenRhue/projectGenerator/main/setup.sh)"
-            source ~/.zshrc
-            rm -fr ./setuptool
-            ;;
-        "1")rm -fr ./setuptool;;
-     * )  echo "invalid option" ;;
-    esac
     sleep 1
 
 

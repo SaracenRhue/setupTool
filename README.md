@@ -2,7 +2,7 @@
 
 ## Description
 
-This tool tool helps you set up your Arch, Debian, Fedora and MacOS system.<br>
+This tool tool helps you set up your Arch, Debian, Fedora, MacOS and Windows system.<br>
 
 ## Usage
 
@@ -16,7 +16,7 @@ scoop bucket add extras
 scoop bucket add versions
 ```
 
-paste this in your terminal / powershell:
+Paste this in your terminal / powershell:
 
 ```bash
 git clone https://github.com/saracenrhue/setuptool.git
@@ -63,11 +63,32 @@ bash -c "$(curl https://raw.githubusercontent.com/SaracenRhue/setupTool/main/cst
 * portainer `http://localhost:9000`
 * resilio-sync `http://localhost:8888`
 
-to setup nginx forward port `80` to `1880` and `443` to `18443` on your router
+To setup nginx forward port `80` to `1880` and `443` to `18443` on your router
 
 ### Developers
 
 You can add new features by adding a new `.sh` file into the distro folder.
 the menu gets generated automaticly by reading the filenames in that folder.
-(use `_` for spaces in your filenames)<br/>
+(use `_` for spaces in your filenames)<br>
 If you want to change the menu order you can add a `#` in front of the filename.
+
+#### Walkthrough
+
+##### start
+
+* You start in `start.sh` where you select your OS
+* The menu calls the corresponding `.sh` file in `/desktops`
+* This file installs python and other dependencies and calls the `main.py` with an argument that parses along the selected OS
+* From here the menu with all availible tasks gets generated based in the files in the OS folder (e.g. /debian)
+
+##### docker menu
+
+* If you select the docker install from the task menu the script will call the `docker_menu.py`
+* From here a menu gets generated from the files in `dockerScripts`
+* Here you can select some containers you may want to install
+
+##### package menu
+
+* If you select `install packages`, `install npm packages` or `install pip packages` the `pack_menu.py` gets called with an argument corresponding to the selected os to determine the install commands
+* From here a menu gets generated from list in the `packages.yml`
+* The keys in this file will be shown in the menu and the values are the actual package names.
