@@ -29,6 +29,7 @@ nix:
   vlc: vlc
   tor: tor-browser
   pia: private-internet-access
+  resilio: resilio-sync
   zoom: zoom
   nodejs: nodejs nodePackages.npm
   java: jre8
