@@ -3,6 +3,7 @@
 ## Description
 
 This tool tool helps you set up your Arch, Debian, Fedora, MacOS and Windows system.<br>
+The windows section is in development and may not work properly<br>
 
 ## Usage
 
