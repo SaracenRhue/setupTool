@@ -33,7 +33,7 @@ PKGS=(
 'cmatrix'
 )
 for PKG in "${PKGS[@]}"; do
-    nix-env -iA nixos.$PKG
+    nix-env -iA nixpkgs.$PKG
 done
 ##########################################
 PKGS=(
@@ -48,7 +48,7 @@ PKGS=(
 'pygame'
 )
 for PKG in "${PKGS[@]}"; do
-    nix-env -iA nixos.python310Packages.$PKG
+    pip3 install $PKG
 done
 
 #python main.py nix
