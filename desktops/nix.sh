@@ -1,10 +1,13 @@
 #!/bin/bash
+
 export NIXPKGS_ALLOW_UNFREE=1
 nix-channel --update
 nix-env -u
 nix-env -iA nixos.python311
 nix-env -iA nixos.python310Packages.pick
 nix-env -iA nixos.python310Packages.pyyaml
+alias 'pip3 install '='nix-env -iA nixos.python310Packages.'
+alias nixpkgs=nixos
 ##########################################
 PKGS=(
 'vscode'
@@ -45,7 +48,7 @@ PKGS=(
 'pygame'
 )
 for PKG in "${PKGS[@]}"; do
-    python310Packages.$PKG
+    nix-env -iA nixos.python310Packages.$PKG
 done
 
 #python main.py nix

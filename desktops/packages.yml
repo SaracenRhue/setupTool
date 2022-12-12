@@ -31,7 +31,7 @@ nix:
   pia: private-internet-access
   resilio: resilio-sync
   zoom: zoom
-  nodejs: nodejs nodePackages.npm
+  nodejs: nodejs nixpkgs.nodePackages.npm
   java: jre8
   virsh: libvirt
   tree: tree
