@@ -1,5 +1,6 @@
 #!/bin/bash
 export NIXPKGS_ALLOW_UNFREE=1
+nix-channel --update
 nix-env -u
 nix-env -iA nixos.python311
 nix-env -iA nixos.python310Packages.pick
