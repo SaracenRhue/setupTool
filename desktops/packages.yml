@@ -1,82 +1,80 @@
 yay:
-  vscode: visual-studio-code-bin
+  brave: brave-browser
+  cmatrix: cmatrix
   discord: discord
+  firefox: firefox
   github: github-desktop-bin
   gparted: gparted
+  java: jre-openjdk
   krusader: krusader
   nextcloud: nextcloud-client
-  firefox: firefox
-  brave: brave-browser
-  vlc: vlc
-  tor: tor-browser
-  pia: private-internet-access-vpn
-  zoom: zoom
   nodejs: nodejs npm
-  java: jre-openjdk
-  virsh: libvirt
-  tree: tree
+  pia: private-internet-access-vpn
   timeshift: grub grub-btrfrs timeshift
-  cmatrix: cmatrix
+  tor: tor-browser
+  tree: tree
+  vlc: vlc
+  vscode: visual-studio-code-bin
+  zoom: zoom
 nix:
-  vscode: vscode
+  brave: brave
+  cmatrix: cmatrix
   discord: discord
+  firefox: firefox
   github: github-desktop
   gparted: gparted
+  java: jre8
   krusader: krusader
   nextcloud: nextcloud-client
-  firefox: firefox
-  brave: brave
-  vlc: vlc
-  tor: tor-browser
+  nodejs: nodejs nixpkgs.nodePackages.npm
   pia: private-internet-access
   resilio: resilio-sync
-  zoom: zoom
-  nodejs: nodejs nixpkgs.nodePackages.npm
-  java: jre8
-  virsh: libvirt
-  tree: tree
-  timeshift: timeshift
   sshpass: sshpass
-  cmatrix: cmatrix
+  tailscale: tailscale
+  timeshift: timeshift
+  tor: tor-browser
+  tree: tree
+  virsh: libvirt
+  vlc: vlc
+  zoom: zoom
 brew:
   alfred: --cask alfred
   discord: --cask discord
-  github: --cask github
-  iTerm2: --cask iterm2
-  vscode: --cask visual-studio-code
   docker: docker docker-compose
-  nodejs: nodejs npm
-  java: openjdk
+  github: --cask github
   go: go
-  rust: rust
+  iTerm2: --cask iterm2
+  java: openjdk
   kotlin: kotlin
+  nodejs: nodejs npm
+  rust: rust
+  vscode: --cask visual-studio-code
 scoop:
-  vscode: vscode
+  brave: brave
   discord: discord
   docker: docker docker-compose
-  github: github
   firefox: firefox
-  brave: brave
+  gcc: gcc
+  github: github
+  go: go
+  java: java
+  kotlin: kotlin
+  nodejs: nodejs
+  rust: rust
   tor: tor
   vlc: vlc
+  vscode: vscode
   zoom: zoom
-  gcc: gcc
-  nodejs: nodejs
-  java: java
-  go: go
-  rust: rust
-  kotlin: kotlin
 pip:
-  yaml: pyyaml
-  pick: pick
-  eel: eel
   bs4: beautifulsoup4
+  eel: eel
   icecream: icecream
-  discord: discord
-  selenium: selenium
-  pyautogui: pyautogui
+  pick: pick
   pygame: pygame
+  pyautogui: pyautogui
+  pyyaml: pyyaml
+  selenium: selenium
 npm:
-  typescript: typescript
-  sass: sass
   angular: '@angular/cli'
+  sass: sass
+  typescript: typescript
