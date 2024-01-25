@@ -1,7 +1,6 @@
 #!/bin/bash
 
-curl -fsSL https://get.docker.com -o get-docker.sh
-sudo sh get-docker.sh
+curl -fsSL https://get.docker.com | sh
 sudo usermod -aG docker $USER
 sudo apt install docker-compose -y
 sudo systemctl enable docker
